@@ -62,11 +62,12 @@ Algunos plugins están hechos para ser usados por el creador del bot.
 
 #Administración {administration.lua}
 <b>No recomiendo que useis este plugin. Mejor usad otros bots, como el [DBTeam](https://github.com/josepdal/dbteam)</b>
-The administration plugin enables self-hosted, single-realm group administration, supporting both normal groups and supergroups. This works by sending TCP commands to an instance of tg running on the owner's account.
+<br>
+EL plugin de administración añade una función al bot para moderar grupos automaticamente, soportando tanto grupos normales como supergrupos. Esto funciona enviado comandos vía TCP a una instancia de Telegram que es ejecutada en la propia cuenta del propietario del bot.
 
-To get started, run `./tg-install.sh`. Note that this script is written for Ubuntu/Debian. If you're running Arch (the only acceptable alternative), you'll have to do it yourself. If that is the case, note that otouto uses the "test" branch of tg, and the AUR package `telegram-cli-git` will not be sufficient, as it does not have support for supergroups yet.
+Para empezar, ejecuta `./tg-install.sh`. Ten en cuenta que esta script está diseñada para Ubuntu/Debian. Si tu estás en Arch (la otra alternativa "aceptable"), tendrás que hacerlo manualmente. En este caso, ten en cuenta que M4STER_Bot usa la branch test de Telegram, y el paquete `telegram-cli-git` no será suficiente puesto que no tiene soporte para supergrupos.
 
-Once the installation is finished, enable `administration.lua` in your config file. You may have reason to change the default TCP port (4567); if that is the case, remember to change it in `tg-launch.sh` as well. Run `./tg-launch.sh` in a separate screen/tmux window. You'll have to enter your phone number and go through the login process the first time. The script is set to restart tg after two seconds, so you'll need to Ctrl+C after exiting.
+Una vez la instalación ha concluido, activa el plugin `administration.lua` en tu plugin de configuración. Podrás cambiar el puerto TCP (4567); pero en este caso, ten en cuenta de cambiarlo también en `tg-launch.sh`. Ejecuta `./tg-launch.sh` e un terminal distinto. Tendrás que meter tu número de teléfono y seguir todo el proceso de login la primera vez. La script está diseñada para cerrarse unos segundos después, por lo que tendrás que ejecutar Control+C para salir.
 
 While tg is running, you may start/reload otouto with administration.lua enabled, and have access to a wide variety of administrative commands and automata. The administration "database" is stored in `administration.json`. To start using otouto to administrate a group (note that you must be the owner (or an administrator)), send `/gadd` to that group. For a list of commands, use `/ahelp`. Below I'll describe various functions now available to you.
 
