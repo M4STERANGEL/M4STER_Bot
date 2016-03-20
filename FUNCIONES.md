@@ -1,26 +1,22 @@
-#Como funciona el bot
+#Activar más plugins
+
+Si quieres activar los plugins que están desactivados por defecto, deberás añadirlos en el archivo `config.lua`, entre las dos líneas que están marcadas.
+
+<b>Ten en cuenta que algunos plugins necesitan una locacalización especial, por lo que ten cuidado al ponerlos</b>
 
 
-## Setup {#Setup}
-You _must_ have Lua (5.2+), lua-socket, lua-sec, and lua-cjson installed. To upload files, you must have curl installed. To use fortune.lua, you must have fortune installed.
+#Usar las APIs
+<b>Algunos plugins necesitan unas APIs para funcionar, por lo que tendrás que solicitarlas a las webs correspondientes:</b>
 
-**Before doing anything**, open config.lua and set `bot_api_key` to the authentication token you received from the Botfather.
-
-You may want to set: `admin`, your Telegram ID; `time_offset`, a positive or negative number, denoting the difference, in seconds, of your system clock to UTC; and `lang`, a lowercase, two-letter code representing your language. Some plugins are not enabled by default. If you wish to enable them, add them to the `plugins` table (before help.lua).
-
-To start the bot, run `./launch.sh`. To stop the bot, send "/halt" from your admin account, and then Ctrl+C out of the loop. If you terminate the bot manually, you risk data loss. If you do not wish the bot to restart automatically, run it with `lua bot.lua`.
-
-Note that certain plugins, such as translate.lua and greetings.lua, will require privacy mode to be disabled. Additionally, some plugins may require or make use of various API keys:
-
- - weather.lua: [OpenWeatherMap](http://openweathermap.org) API key
- - lastfm.lua: [last.fm](http://last.fm) API key
- - bible.lua: [Biblia](http://biblia.com) API key
- - cats.lua: [The Cat API](http://thecatapi.com) API key (optional)
- - gImages.lua: [Google](http://console.developers.google.com) API and CSE keys
- - youtube.lua: [Google](http://console.developers.google.com) API key
- - apod.lua: [NASA](http://api.nasa.gov) API key
- - translate.lua: [Yandex](https://tech.yandex.com/keys/get/?service=trnsl) API key
- - chatter.lua: [SimSimi](http://developer.simsimi.com/signUp) API key
+ - weather.lua: Clave [OpenWeatherMap](http://openweathermap.org) API
+ - lastfm.lua: Clave [last.fm](http://last.fm) API
+ - bible.lua: Clave [Biblia](http://biblia.com) API
+ - cats.lua: Clave [The Cat API](http://thecatapi.com) API key `(opcional)`
+ - gImages.lua: Clave [Google](http://console.developers.google.com) API y Clave CSE (Custom Search Engine)
+ - youtube.lua: Clave [Google](http://console.developers.google.com) API
+ - apod.lua: Clave [NASA](http://api.nasa.gov) API
+ - translate.lua: Clave [Yandex](https://tech.yandex.com/keys/get/?service=trnsl) API
+ - chatter.lua: Clave [SimSimi](http://developer.simsimi.com/signUp) API
 
 * * *
 
