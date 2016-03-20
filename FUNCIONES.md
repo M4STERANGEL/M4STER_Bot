@@ -21,7 +21,7 @@ Si quieres activar los plugins que están desactivados por defecto, deberás añ
 
 * * *
 
-## Plugins {#Plugins}
+#Plugins
 M4STER_Bot usa un sistema similar de plugins a yagop [Telegram-Bot](http://github.com/yagop/telegram-bot). Pretendo que sea más facil de usar de esta forma para los que ya trabajaron con yagop, TeleSeed o DBTeam.
 
 La mayoría de plugins están hechos de tal forma que todos los puedan usar, pero otros no, como los de [Liberbot](#Liberbot-related_plugins), o [para ser usados por el admin del bot](#Control_plugins). Mira la lista de plugins para saber más.
@@ -40,28 +40,28 @@ La función `on_msg_receive()` añade algunas variables a la tabla `msg` según 
 
 Dar valores desde `action()` son opcionales, pero suele tener un efecto positivo en el bot. Si tiene que dar una tabla, esa tabla se converitrá en un `msg`, y `on_msg_receive`continuará la función. Si da una respuesta `true`, continuará con el actual `msg`.
 
-When an action or cron function fails, the exception is caught and passed to the `handle_exception()` utilty (in utilities.lua) and is either printed to the console or send to the chat/channel defined in `log_chat` in config.lua.
+Cuando una función o cron falla, la función `handle_exception()`, localizada en el archivo utilities.lua, intenta resolverlo y también se queda grabado en la consola o se envía al chat que está definido como `log_chat` en config.lua.
 
-Interactions with the bot API are straightforward. Every binding function shares the name of the API method (eg `sendMessage()`). An additional function, `sendReply()`, accepts the `msg` table and a string as an argument, and sends the string as a reply to that message.
 
-Several functions used in multiple plugins are defined in utilities.lua. Refer to that file for usage and documentation.
+Muchas funciones están definidas en utilities.lua.
 
 * * *
 
-## Control plugins {#Control_plugins}
-Some plugins are designed to be used by the bot's owner. Here are some examples, how they're used, and what they do.
+#Plugins de Control
+Algunos plugins están hechos para ser usados por el creador del bot.
 
 | Plugin | Command | Function |
 |:-------|:--------|:---------|
-| control.lua | /reload | Reloads all plugins and configuration. |
-| control.lua | /halt | Saves the database and shuts down the bot properly. |
-| blacklist.lua | /blacklist | Allows the admin to list people the bot will ignore. |
-| shell.lua | /run | Executes shell commands on the host operating system. |
-| luarun.lua | /lua | Executes Lua commands in the bot's environement. |
+| control.lua | /reiniciar | Reinicia el bot |
+| control.lua | /stop | Detiene el bot de forma segura |
+| blacklist.lua | /blacklist | Permite a los admins decir que gente no puede usar el bot |
+| shell.lua | /run | Ejecuta comandos en la terminal actual |
+| luarun.lua | /lua | Ejecuta comandos Lua que el bot interpretará |
 
 * * *
 
-## administration.lua {#administration.lua}
+#Administración {administration.lua}
+<b>No recomiendo que useis este plugin. Mejor usad otros bots, como el [DBTeam](https://github.com/josepdal/dbteam)</b>
 The administration plugin enables self-hosted, single-realm group administration, supporting both normal groups and supergroups. This works by sending TCP commands to an instance of tg running on the owner's account.
 
 To get started, run `./tg-install.sh`. Note that this script is written for Ubuntu/Debian. If you're running Arch (the only acceptable alternative), you'll have to do it yourself. If that is the case, note that otouto uses the "test" branch of tg, and the AUR package `telegram-cli-git` will not be sufficient, as it does not have support for supergroups yet.
