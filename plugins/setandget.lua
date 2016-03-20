@@ -4,7 +4,7 @@ local command = 'set <nombre> <valor>'
 local doc = [[```
 /set <nombre> <valor>
 Guarda el valor con ese nombre
-Usa "/set <nombre> --" para eliminar el valor
+Usa "/set <nombre> --" para eliminar ese valor
 /get [nombre]
 Devuelve el valor que hay en ese nombre
 ```]]
