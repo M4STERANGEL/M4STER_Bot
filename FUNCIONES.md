@@ -69,37 +69,38 @@ Para empezar, ejecuta `./tg-install.sh`. Ten en cuenta que esta script está dis
 
 Una vez la instalación ha concluido, activa el plugin `administration.lua` en tu plugin de configuración. Podrás cambiar el puerto TCP (4567); pero en este caso, ten en cuenta de cambiarlo también en `tg-launch.sh`. Ejecuta `./tg-launch.sh` e un terminal distinto. Tendrás que meter tu número de teléfono y seguir todo el proceso de login la primera vez. La script está diseñada para cerrarse unos segundos después, por lo que tendrás que ejecutar Control+C para salir.
 
-While tg is running, you may start/reload otouto with administration.lua enabled, and have access to a wide variety of administrative commands and automata. The administration "database" is stored in `administration.json`. To start using otouto to administrate a group (note that you must be the owner (or an administrator)), send `/gadd` to that group. For a list of commands, use `/ahelp`. Below I'll describe various functions now available to you.
+Mientras el tg-cli está funciona, deberás ejecutar M4STER_Bot en otro terminal para tener acceso a otros comandos de administración automatizados. La base de datos de administarción se almacena en `administration.json`. 
+Para comanezar a usar M4STER_Bot como adinistrador de grupos (ten en cuenta que deberás ser administrador del grupo ), envía `/gadd` a ese grupo. Para una lista de comandos, escribe `/ahelp`. Debajo teneis una tablita que lo indica todo.
 
-| Command | Function | Privilege | Internal? |
+| Comando | Fucnión | Rango de Privilegio | Interno? |
 |:--------|:---------|:----------|:----------|
-| /groups | Returns a list of administrated groups (except those flagged "unlisted". | 1 | N |
-| /ahelp | Returns a list of administrative commands and their required privileges. | 1 | Y |
-| /ops | Returns a list of moderators, governors, and administrators. | 1 | Y |
-| /desc | Returns the link, rules, MOTD, and enabled flags of a group. | 1 | Y |
-| /rules | Returns the rules of a group. | 1 | Y |
-| /motd | Returns a group's "Message of the Day". | 1 | Y |
-| /link | Returns the link for a group. | 1 | Y |
-| /leave | Removes the user from the group. | 1 | Y |
-| /kick | Removes the target from the group. | 2 | Y |
-| /ban | Bans the target from the group. | 2 | Y |
-| /unban | Unbans the target from the group. | 2 | Y |
-| /changerule | Changes an individual group rule. | 3 | Y |
-| /setrules | Sets the rules for a group. | 3 | Y |
-| /setmotd | Sets a group's "Message of the Day". | 3 | Y |
-| /setlink | Sets a group's link. | 3 | Y |
-| /flag | Returns a list of available flags and their settings, or toggles a flag. | 3 | Y |
-| /mod | Promotes a user to a moderator. | 3 | Y |
-| /demod | Demotes a moderator to a user. | 3 | Y |
-| /gov | Promotes a user to a governor. | 4 | Y |
-| /degov | Demotes a governor to a user. | 4 | Y |
-| /hammer | Bans a user globally, and blacklists him. | 4 | N |
-| /unhammer | Removes a user's global ban, and unblacklists him. | 4 | N |
-| /admin | Promotes a user to an administrator. | 5 | N |
-| /deadmin | Demotes an administrator to a user. | 5 | N |
-| /gadd | Adds a group to the administrative system. | 5 | N |
-| /grem | Removes a group from the administrative system | 5 | Y |
-| /broadcast | Broadcasts a message to all administrated groups. | 5 | N |
+| /groups | Da una lista de grupos administrados (excepto los exclidos como "unlisted") | 1 | NO |
+| /ahelp | Da una lista de los comandos disponibles junto con su nivel de privilegio | 1 | SI |
+| /ops | Da una lista de moderadores y governantes | 1 | SI |
+| /desc | Da una lista con el link, reglas y moderadores del grupo | 1 | SI |
+| /rules | Da las reglas del grupo | 1 | SI |
+| /motd | Da al grupo el mensaje del día | 1 | SI |
+| /link | Da el link del grupo | 1 | SI |
+| /leave | Elimina al usuario que lo escribió del grupo | 1 | SI |
+| /kick | Elimina a ese usuario del grupo | 2 | SI |
+| /ban | Banea a ese usuario del grupo | 2 | SI|
+| /unban | Desbanea a ese usuario del grupo | 2 | SI |
+| /changerule | Changes an individual group rule. | 3 | SI |
+| /setrules | Sets the rules for a group. | 3 | SI |
+| /setmotd | Sets a group's "Message of the Day". | 3 | SI |
+| /setlink | Sets a group's link. | 3 | SI |
+| /flag | Returns a list of available flags and their settings, or toggles a flag. | 3 | SI |
+| /mod | Promotes a user to a moderator. | 3 | SI |
+| /demod | Demotes a moderator to a user. | 3 | SI |
+| /gov | Promotes a user to a governor. | 4 | SI |
+| /degov | Demotes a governor to a user. | 4 | SI |
+| /hammer | Bans a user globally, and blacklists him. | 4 | NO |
+| /unhammer | Removes a user's global ban, and unblacklists him. | 4 | NO |
+| /admin | Promotes a user to an administrator. | 5 | NO |
+| /deadmin | Demotes an administrator to a user. | 5 | NO |
+| /gadd | Adds a group to the administrative system. | 5 | NO |
+| /grem | Removes a group from the administrative system | 5 | SI |
+| /broadcast | Broadcasts a message to all administrated groups. | 5 | NO |
 
 Internal commands can only be run within an administrated group.
 
@@ -200,31 +201,3 @@ Once this is set up, put your bot in the admin group and run `/modadd` and `/mod
 ## Style {#Style}
 Bot output from every plugin should follow a consistent style. This style is easily observed interacting with the bot.
 Titles should be either **bold** (along with their colons) or a [link](http://otou.to) (with plaintext colons) to the content's source. Names should be _italic_. Numbered lists should use bold numbers followed by a bold period followed by a space. Unnumbered lists should use the • bullet point followed by a space. Descriptions and information should be in plaintext, although "flavor" text should be italic. Technical information should be `monospace`. Links should be named.
-
-## Contributors {#Contributors}
-Everybody is free to contribute to otouto. If you are interested, you are invited to fork the [repo](http://github.com/topkecleon/otouto) and start making pull requests.. If you have an idea and you are not sure how to implement it, open an issue or bring it up in the Bot Development group.
-
-The creator and maintainer of otouto is [topkecleon](http://github.com/topkecleon). He can be contacted via [Telegram](http://telegram.me/topkecleon), [Twitter](http://twitter.com/topkecleon), or [email](mailto:drew@otou.to).
-
-There are a a few ways to contribute if you are not a programmer. For one, your feedback is always appreciated. Drop me a line on Telegram or on Twitter. Secondly, we are always looking for new ideas for plugins. Most new plugins start with community input. Feel free to suggest them on Github or in the Bot Dev group. You can also donate Bitcoin to the following address:
-`1BxegZJ73hPu218UrtiY8druC7LwLr82gS`
-
-Contributions are appreciated in any form. Monetary contributions will go toward server costs. Both programmers and donators will be eternally honored (at their discretion) on this page.
-
-| Contributors |
-|:-----------|
-| [Juan Potato](http://github.com/JuanPotato) |
-| [Tiago Danin](http://github.com/TiagoDanin) |
-| [bb010g](http://github.com/bb010g) |
-| [Ender](http://github.com/luksireiku) |
-| [Iman Daneshi](http://github.com/Imandaneshi) |
-| [HeitorPB](http://github.com/heitorPB) |
-| [Akronix](http://github.com/Akronix) |
-| [Ville](http://github.com/cwxda) |
-| [dogtopus](http://github.com/dogtopus) |
-
-| Donators |
-|:---------|
-| [n8](http://telegram.me/n8_c00) |
-| [Alex](http://telegram.me/sandu) |
-| [Brayden Banks](http://telegram.me/bb010g) |
