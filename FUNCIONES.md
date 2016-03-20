@@ -4,6 +4,7 @@ Si quieres activar los plugins que están desactivados por defecto, deberás añ
 
 <b>Ten en cuenta que algunos plugins necesitan una locacalización especial, por lo que ten cuidado al ponerlos</b>
 
+* * *
 
 #Usar las APIs
 <b>Algunos plugins necesitan unas APIs para funcionar, por lo que tendrás que solicitarlas a las webs correspondientes:</b>
@@ -21,15 +22,15 @@ Si quieres activar los plugins que están desactivados por defecto, deberás añ
 * * *
 
 ## Plugins {#Plugins}
-otouto uses a robust plugin system, similar to that of yagop's [Telegram-Bot](http://github.com/yagop/telegram-bot). The aim of the otouto project is to contain any desirable bot feature within one universal bot framework.
+M4STER_Bot usa un sistema similar de plugins a yagop [Telegram-Bot](http://github.com/yagop/telegram-bot). Pretendo que sea más facil de usar de esta forma para los que ya trabajaron con yagop, TeleSeed o DBTeam.
 
-Most plugins are intended for public use, but a few are for other purposes, like those used alongside [Liberbot](#Liberbot-related_plugins), or for [use by the bot's owner](#Control_plugins). See [Development](#Development) for a breakdown of the components of a plugin, or [here](#List_of_plugins) for a list of plugins.
+La mayoría de plugins están hechos de tal forma que todos los puedan usar, pero otros no, como los de [Liberbot](#Liberbot-related_plugins), o [para ser usados por el admin del bot](#Control_plugins). Mira la lista de plugins para saber más.
 
-A plugin can have five components, and two of them are required:
+Un plugin puede tener varios componentes:
 
-| Component | Description | Required? |
-|:----------|:------------|:----------|
-| action | The main function. It accepts the `msg` table as an argument. | Y |
+| Componente | Descripción | Requerido? |
+|:-----------|:------------|:-----------|
+| action | La función principal. Usa `msg` como argumento | SI |
 | triggers | A table of commands to be used for the plugin. Use Lua patterns. | Y |
 | cron | An optional function to be called approximately every minute. | N |
 | command | The basic command and syntax. This is listed in the help text. | N |
