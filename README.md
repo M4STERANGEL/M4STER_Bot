@@ -42,3 +42,11 @@ git pull
 
 #Configuración Extra
 Si quieres configurar más cosas, como las <b>APis</b> o personalizarlo más, tendrás que mirar el archivo [funciones.md](https://github.com/M4STERANGEL/M4STER_Bot/blob/beta/FUNCIONES.md)
+
+* * *
+
+#Bot Original
+<b>Esto es una versión adaptada de otro bot</b>
+
+El bot original es: otouto <br>
+[![https://github.com/topkecleon/otouto](https://img.shields.io/badge/Original-otouto-yellow.svg)](https://github.com/topkecleon/otouto)
