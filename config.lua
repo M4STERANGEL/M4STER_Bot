@@ -12,9 +12,9 @@ return {
 	simsimi_trial = true,
 	time_offset = 3600,
 	lang = 'es',
-	-- If you change this, make sure you also modify launch-tg.sh.
+	-- Recomendable que no toques esto
 	cli_port = 4567,
-	admin = --Tu ID,
+	admin = 00000000, --Tu ID
 	admin_name = '',
 	log_chat = nil,
 	about_text = [[
