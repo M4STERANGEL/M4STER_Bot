@@ -31,3 +31,11 @@ Tendrás que configurar el archivo config.lua, en donde pone bot_api_key, tu tok
 ```bash
 git pull
 ```
+
+#Links de Interés
+<b>Entra en el grupo de desarrollo</b>
+[![https://telegram.me/joinchat/Bu3iND4UwqEZoSRXf__LjQ](https://img.shields.io/badge/Join-Group-blue.svg)](https://telegram.me/joinchat/Bu3iND4UwqEZoSRXf__LjQ)
+<b></b>
+<br>
+<b>Contacta con el desarrollador</b>
+[![https://telegram.me/m4ster_angel(https://img.shields.io/badge/Join-Group-blue.svg)](https://telegram.me/M4STER_ANGEL)
