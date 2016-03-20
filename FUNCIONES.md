@@ -85,24 +85,24 @@ Para comanezar a usar M4STER_Bot como adinistrador de grupos (ten en cuenta que 
 | /kick | Elimina a ese usuario del grupo | 2 | SI |
 | /ban | Banea a ese usuario del grupo | 2 | SI|
 | /unban | Desbanea a ese usuario del grupo | 2 | SI |
-| /changerule | Changes an individual group rule. | 3 | SI |
-| /setrules | Sets the rules for a group. | 3 | SI |
-| /setmotd | Sets a group's "Message of the Day". | 3 | SI |
-| /setlink | Sets a group's link. | 3 | SI |
-| /flag | Returns a list of available flags and their settings, or toggles a flag. | 3 | SI |
-| /mod | Promotes a user to a moderator. | 3 | SI |
-| /demod | Demotes a moderator to a user. | 3 | SI |
-| /gov | Promotes a user to a governor. | 4 | SI |
-| /degov | Demotes a governor to a user. | 4 | SI |
-| /hammer | Bans a user globally, and blacklists him. | 4 | NO |
-| /unhammer | Removes a user's global ban, and unblacklists him. | 4 | NO |
-| /admin | Promotes a user to an administrator. | 5 | NO |
-| /deadmin | Demotes an administrator to a user. | 5 | NO |
-| /gadd | Adds a group to the administrative system. | 5 | NO |
-| /grem | Removes a group from the administrative system | 5 | SI |
-| /broadcast | Broadcasts a message to all administrated groups. | 5 | NO |
+| /changerule | Cambia una regla de grupo individual | 3 | SI |
+| /setrules | Cambia las reglas del grupo | 3 | SI |
+| /setmotd | Cambia el mensaje del día | 3 | SI |
+| /setlink | Cambia el link del grupo | 3 | SI |
+| /flag | Da una lista de reglas disponibles | 3 | SI |
+| /mod | Registra a ese usuario como moderador | 3 | SI |
+| /demod | Degrada a ese usuario a miembro | 3 | SI |
+| /gov | Registra a ese usuario como governador | 4 | SI |
+| /degov | Degrada a ese usuario a miembro | 4 | SI |
+| /hammer | Banea a ese usuario globalmente, y lo marca en la blacklist | 4 | NO |
+| /unhammer | Elimina el baneo global a ese usuario, y lo elimina de la blacklist | 4 | NO |
+| /admin | Nombra a ese usuario como administrador | 5 | NO |
+| /deadmin | Degrada a ese usuario a miembro | 5 | NO |
+| /gadd | Añade el grupo al sistema de administración | 5 | NO |
+| /grem | Elimina ese grupo del sistema de administración | 5 | SI |
+| /broadcast | Difunde un mensaje por todos los grupos administrados | 5 | NO |
 
-Internal commands can only be run within an administrated group.
+Los comandos internos solo funcionan en un grupo administrado.
 
 ### Description of Privileges
 
