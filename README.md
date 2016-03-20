@@ -15,6 +15,7 @@ sudo apt-get install lua-cjson
 ```bash
 git clone -b beta https://github.com/M4STERANGEL/M4STER_Bot.git
 cd M*
+chmod +x launch.sh
 ```
 
 3 <b>Configurar el bot</b>
