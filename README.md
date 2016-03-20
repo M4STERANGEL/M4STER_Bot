@@ -38,4 +38,4 @@ git pull
 <b></b>
 <br>
 <b>Contacta con el desarrollador</b>
-[![https://telegram.me/m4ster_angel(https://img.shields.io/badge/Join-Group-blue.svg)](https://telegram.me/M4STER_ANGEL)
+[![https://telegram.me/m4ster_angelhttps://img.shields.io/badge/Contacta-Desarrollador-red.svg)](https://telegram.me/M4STER_ANGEL)
