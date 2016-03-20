@@ -43,3 +43,12 @@ git pull
 <b>Contacta con el desarrollador</b>
 
 [![https://telegram.me/m4ster_angel](https://img.shields.io/badge/Contacta-Desarrollador-red.svg)](https://telegram.me/M4STER_ANGEL)
+
+
+* * *
+
+#Bot Original
+<b>Esto es una versión adaptada de otro bot</b>
+
+El bot original es: otouto <br>
+[![https://github.com/topkecleon/otouto](https://img.shields.io/badge/Original-otouto-yellow.svg)](https://github.com/topkecleon/otouto)
