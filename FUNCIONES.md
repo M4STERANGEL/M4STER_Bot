@@ -31,14 +31,14 @@ Un plugin puede tener varios componentes:
 | Componente | Descripción | Requerido? |
 |:-----------|:------------|:-----------|
 | action | La función principal. Usa `msg` como argumento | SI |
-| triggers | A table of commands to be used for the plugin. Use Lua patterns. | Y |
-| cron | An optional function to be called approximately every minute. | N |
-| command | The basic command and syntax. This is listed in the help text. | N |
-| doc | Usage and other info for the plugin. This is returned with "/help command" | N |
+| triggers | Una tabla de comandos que usa el plugin. Usa unas funciones de lua | SI |
+| cron | Una función que llama al plugin aproximadamente cada minuto | NO |
+| command | La sintaxis y comando principal. Se pone en la ayuda del bot | NO |
+| doc | COmo se usa y otra ayuda para el plugin. Se puede saber con el comando /help | NO |
 
-The `on_msg_receive()` function adds a few variables to the `msg` table for your convenience. These are self-explanatory: `msg.from.id_str`, `msg.to.id_str`, `msg.chat.id_str`, `msg.text_lower`, `msg.from.name`.
+La función `on_msg_receive()` añade algunas variables a la tabla `msg` según tus preferencias. Las siguientes se explican solas: `msg.from.id_str`, `msg.to.id_str`, `msg.chat.id_str`, `msg.text_lower`, `msg.from.name`.
 
-Return values from `action()` are optional, but they do effect the flow. If it returns a table, that table will become `msg`, and `on_msg_receive` will continue with that. If it returns `true`, it will continue with the current `msg`.
+Dar valores desde `action()` son opcionales, pero suele tener un efecto positivo en el bot. Si tiene que dar una tabla, esa tabla se converitrá en un `msg`, y `on_msg_receive`continuará la función. Si da una respuesta `true`, continuará con el actual `msg`.
 
 When an action or cron function fails, the exception is caught and passed to the `handle_exception()` utilty (in utilities.lua) and is either printed to the console or send to the chat/channel defined in `log_chat` in config.lua.
 
