@@ -101,7 +101,10 @@ Envía /help para empezar.
 		'shout.lua',
 		'apod.lua',
 		'patterns.lua',
-        	'help.lua',
-		-- Put new plugins above this line.
+		-- Pon los plugins nuevos debajo de esta línea
+		
+		-- Pon los plugins nuevos encima de esta línea
+		'help.lua',
+		
 	}
 }
