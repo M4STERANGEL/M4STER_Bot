@@ -34,8 +34,8 @@ git pull
 ```
 
 #Configuración Inicial
-<b>Tendrás que configurar, en el archivo config.lua:</b>
-`admin` - Tu ID de Telegram
-`admin_name` - Como quieres que te llame el bot
-`time_offset` - Un número positivo/negativo que indique tu diferencia horaria con respecto al UTC
+<b>Tendrás que configurar, en el archivo config.lua:</b><br><br>
+`admin` - Tu ID de Telegram<br>
+`admin_name` - Como quieres que te llame el bot<br>
+`time_offset` - Un número positivo/negativo que indique tu diferencia horaria con respecto al UTC<br>
 `lang` - Idioma del Bot (en, es...)
