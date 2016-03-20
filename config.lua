@@ -18,7 +18,8 @@ return {
 	admin_name = '',
 	log_chat = nil,
 	about_text = [[
-Bot con la API de @M4STER_Bot
+Escribe lo que quieras aquí.
+Se encuentra en config.lua
 
 Envía /help para empezar.
 ]]	,
