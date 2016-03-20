@@ -1,11 +1,12 @@
 database.setandget = database.setandget or {}
 
-local command = 'set <name> <value>'
+local command = 'set <nombre> <valor>'
 local doc = [[```
-/set <name> <value>
-Stores a value with the given name. Use "/set <name> --" to delete the stored value.
-/get [name]
-Returns the stored value or a list of stored values.
+/set <nombre> <valor>
+Guarda el valor con ese nombre
+Usa "/set <nombre> --" para eliminar el valor
+/get [nombre]
+Devuelve el valor que hay en ese nombre
 ```]]
 
 local triggers = {
@@ -43,9 +44,9 @@ local action = function(msg)
 		if not input then
 			local output
 			if table_size(database.setandget[msg.chat.id_str]) == 0 then
-				output = 'No values have been stored here.'
+				output = 'No hay valores guardados aquí.'
 			else
-				output = '*List of stored values:*\n'
+				output = '*Lista de valores guardados:*\n\n'
 				for k,v in pairs(database.setandget[msg.chat.id_str]) do
 					output = output .. '• ' .. k .. ': `' .. v .. '`\n'
 				end
@@ -58,7 +59,7 @@ local action = function(msg)
 		if database.setandget[msg.chat.id_str][input:lower()] then
 			output = '`' .. database.setandget[msg.chat.id_str][input:lower()] .. '`'
 		else
-			output = 'There is no value stored by that name.'
+			output = 'No hay valores guardados con este nombre'
 		end
 
 		sendMessage(msg.chat.id, output, true, nil, true)
