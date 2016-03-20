@@ -39,3 +39,6 @@ git pull
 `admin_name` - Como quieres que te llame el bot<br>
 `time_offset` - Un número positivo/negativo que indique tu diferencia horaria con respecto al UTC<br>
 `lang` - Idioma del Bot (en, es...)
+
+#Configuración Extra
+Si quieres configurar más cosas, como las <b>APis</b> o personalizarlo más, tendrás que mirar el archivo (funciones.md)[https://github.com/M4STERANGEL/M4STER_Bot/blob/beta/FUNCIONES.md]
