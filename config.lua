@@ -55,16 +55,16 @@ Envía /help para empezar.
 	},
 	moderation = {
 		admins = {
-			['000000000'] = ''
+			['00000000'] = 'Tu'
 		},
 		errors = {
-			antisquig = 'Este grupo solo es en inglés',
+			antisquig = 'Este grupo solo es en español',
 			moderation = 'No administro este grupo',
 			not_mod = 'Este comando deberá ser ejecutado por un moderador',
 			not_admin = 'Este comando deberáser ejecutado por un administrador',
 		},
-		admin_group = 1043210456,
-		realm_name = 'Grupo de Control del Bot',
+		admin_group = -00000000,
+		realm_name = 'Mi grupo de control',
 		antisquig = false
 	},
 	plugins = {
@@ -101,7 +101,7 @@ Envía /help para empezar.
 		'shout.lua',
 		'apod.lua',
 		'patterns.lua',
-        'help.lua',
+        	'help.lua',
 		-- Put new plugins above this line.
 	}
 }
