@@ -159,47 +159,47 @@ Cuando todo esto está listo, ejecuta `/modadd` y `/modhelp` para comenzar.
 
 #Lista de plugins
 
-| Plugin | Command | Function | Aliases |
+| Plugin | Comando | Funcción | Alias |
 |:-------|:--------|:---------|:--------|
-| help.lua | /help | Returns a list of commands. | /h |
-| about.lua | /about | Returns the about text as configured in config.lua. |
-| ping.lua | /ping | The simplest plugin ever! |
-| echo.lua | /echo <text> | Repeats a string of text. |
-| gSearch.lua | /google <query> | Returns Google web results. | /g, /gnsfw |
-| gImages.lua | /images <query> | Returns a Google image result. | /i, /insfw |
-| gMaps.lua | /location <query> | Returns location data from Google Maps. | /loc |
-| youtube.lua | /youtube <query> | Returns the top video result from YouTube. | /yt |
-| wikipedia.lua | /wikipedia <query> | Returns the summary of a Wikipedia article. | /wiki |
-| lastfm.lua | /np [username] | Returns the song you are currently listening to. |
-| lastfm.lua | /fmset [username] | Sets your username for /np. /fmset -- will delete it. |
-| hackernews.lua | /hackernews | Returns the latest posts from Hacker News. | /hn |
-| imdb.lua | /imdb <query> | Returns film information from IMDb. |
-| hearthstone.lua | /hearthstone <query> | Returns data for Hearthstone cards matching the query. | /hs |
-| calc.lua | /calc <expression> | Returns solutions to math expressions and conversions between common units. |
-| bible.lua | /bible <reference> | Returns a Bible verse. | /b |
-| urbandictionary.lua | /urbandictionary <query> | Returns the top definition from Urban Dictionary. | /ud, /urban |
-| time.lua | /time <query> | Returns the time, date, and a timezone for a location. |
-| weather.lua | /weather <query> | Returns current weather conditions for a given location. |
-| nick.lua | /nick <nickname> | Set your nickname. /nick - will delete it. |
-| whoami.lua | /whoami | Returns user and chat info for you or the replied-to user. | /who |
-| eightball.lua | /8ball | Returns an answer from a magic 8-ball. |
-| dice.lua | /roll <nDr> | Returns RNG dice rolls. Uses D&D notation. |
-| reddit.lua | /reddit [r/subreddit ¦ query] | Returns the top results from a given subreddit, query, or r/all. | /r |
-| xkcd.lua | /xkcd [query] | Returns an xkcd strip and its alt text. |
-| slap.lua | /slap <target> | Gives someone a slap (or worse). |
-| commit.lua | /commit | Returns a commit message from whatthecommit.com. |
-| fortune.lua | /fortune | Returns a UNIX fortune. |
-| pun.lua | /pun | Returns a pun. |
-| pokedex.lua | /pokedex <query> | Returns a Pokedex entry. | /dex |
-| currency.lua | /cash [amount] <currency> to <currency> | Converts one currency to another. |
-| cats.lua | /cat | Returns a cat picture. |
-| reactions.lua | /reactions | Returns a list of reaction emoticons which can be used through the bot. |
-| apod.lua | /apod [date] | Returns the NASA Astronomy Picture of the Day. |
-| dilbert.lua | /dilbert [date] | Returns a Dilbert strip. |
-| patterns.lua | /s/<from>/<to>/ | Fixed that for you. :^) |
+| help.lua | /help | Comando de ayuda | /h |
+| about.lua | /about | Da una información que se aloja en el archivo config.lua |
+| ping.lua | /ping | El plugin más simple de todos |
+| echo.lua | /echo <texto> | Repite un cacho de textoo |
+| gSearch.lua | /google <consulta> | Busca en Google | /g, /gnsfw |
+| gImages.lua | /images <consulta> | Busca una imagen en Google | /i, /insfw |
+| gMaps.lua | /location <consulta> | Busca un lugar en  Google Maps. | /loc |
+| youtube.lua | /youtube <consulta> | Da el video más visto de Youtu | /yt |
+| wikipedia.lua | /wikipedia <consulta> | Da el articulo wikipedia | /wiki |
+| lastfm.lua | /np [username] | Da la canción que estabas escuchando |
+| lastfm.lua | /fmset [username] | Elige el usuario fijo para /np. /fmset -- lo eliminará |
+| hackernews.lua | /hackernews | Da las ultimas noticias de hackernews | /hn |
+| imdb.lua | /imdb <consulta> | Da la información de la peli de IMDb |
+| hearthstone.lua | /hearthstone <consulta> | Da la información de la carta de HearthStone | /hs |
+| calc.lua | /calc <expresión> | Una calculadora |
+| bible.lua | /bible <referencia> | Da el verso de la biblia | /b |
+| urbandictionary.lua | /urbandictionary <consulta> | Da la definición en el diccionario | /ud, /urban |
+| time.lua | /time <consulta> | Da la información temporal de esa localización |
+| weather.lua | /weather <consulta> | Da el tiempo concreto de esa localización |
+| nick.lua | /nick <nickname> | Elige como quieres que el bot te llame /nick - lo eliminará. |
+| whoami.lua | /whoami | Da la información de ese usuario | /who |
+| eightball.lua | /8ball | Responde a tu pregunta con 8-ball. |
+| dice.lua | /roll <nDr> | Da dados RNG. Usa la notación D&D |
+| reddit.lua | /reddit [r/subreddit ¦ consulta] | Utilidades de reddit | /r |
+| xkcd.lua | /xkcd [consulta] | Da una tira de comic |
+| slap.lua | /slap <target> | Da una torta (oo algo peor) |
+| commit.lua | /commit | Da un mensaje aleatorio |
+| fortune.lua | /fortune | Da una ruleta de la fortuna UNIX |
+| pun.lua | /pun | Da un juego de palabras |
+| pokedex.lua | /pokedex <consulta> | Da una entrada de la pokedex | /dex |
+| currency.lua | /cash [amount] <currency> to <currency> | Convierte una moneda en otra |
+| cats.lua | /cat | Da una foto de un gatito |
+| reactions.lua | /reactions | Da una lista de emoticonos especiales del bot |
+| apod.lua | /apod [date] | Da la imagen del dia de la NASA |
+| dilbert.lua | /dilbert [date] | Da una tira dilbert |
+| patterns.lua | /s/<from>/<to>/ | Arreglo algo para ti |
 
 * * *
 
-## Style {#Style}
-Bot output from every plugin should follow a consistent style. This style is easily observed interacting with the bot.
-Titles should be either **bold** (along with their colons) or a [link](http://otou.to) (with plaintext colons) to the content's source. Names should be _italic_. Numbered lists should use bold numbers followed by a bold period followed by a space. Unnumbered lists should use the • bullet point followed by a space. Descriptions and information should be in plaintext, although "flavor" text should be italic. Technical information should be `monospace`. Links should be named.
+#Estilo
+Las respuestas del bot mantienen siempre un patrón de estilo. Es muy facil de observar al interactuar con el bot.
+Los títulos se escriben con **bold** o un [link](http://m4ster-angel.tk) a una fuente concreta. Los nombres estarán en _italica_. Las listas numeradas deben utilizar los números en negrilla seguido de un período negrita seguido de un espacio. Las listas no numeradas usan los puntos • seguidos de un espacio. Las descripciones e información deben estar en texto sin formato, excepto el texto "con sabor" que debe estar en cursiva. Información técnica debe estar en `monospace`. Los links deberán estar nombrados.
