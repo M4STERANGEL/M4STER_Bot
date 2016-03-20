@@ -104,58 +104,60 @@ Para comanezar a usar M4STER_Bot como adinistrador de grupos (ten en cuenta que 
 
 Los comandos internos solo funcionan en un grupo administrado.
 
-### Description of Privileges
+#Descripción de Privilegios
 
-| # | Title | Description | Scope |
+| # | Nombre | Descripción | Rango |
 |:-:|:------|:------------|:------|
-| 0 | Banned | Cannot enter the group(s). | Either |
-| 1 | User | Default rank. | Local |
-| 2 | Moderator | Can kick/ban/unban users from a group. | Local |
-| 3 | Governor | Can set rules/motd/link. Can promote/demote moderators. Can modify flags. | Local |
-| 4 | Administrator | Can globally ban/unban users. Can promote/demote governors. | Global |
-| 5 | Owner | Can add/remove groups. Can broadcast. Can promote/demote administrators. | Global |
+| 0 | Baneado | No puede entrar a grupos | Todo |
+| 1 | Usuario | Rango predeerminado | Local |
+| 2 | Moderador | Puede expulsar y banear a usuarios de los grupos | Local |
+| 3 | Governador | Puede administrar al 100% los grupos. Puede promover moderadores | Local |
+| 4 | Administrador | Puede banear globalmente a usuarios y promover governadores | Global |
+| 5 | Propietario | Puede añador grupos. Puede promover administradores | Global |
 
-Obviously, each greater rank inherits the privileges of the lower, positive ranks.
+Obviamente, los rangos superiores pueden hacer lo que los inferiores
 
-### Flags
+#Reglas
 
-| # | Name | Description |
+| # | Nombre | Descripción |
 |:-:|:-----|:------------|
-| 1 | unlisted | Removes a group from the /groups listing. |
-| 2 | antisquig | Automatically removes users for posting Arabic script or RTL characters. |
-| 3 | antisquig Strict | Automatically removes users whose names contain Arabic script or RTL characters. |
-| 4 | antibot | Prevents bots from being added by non-moderators. |
+| 1 | unlisted | Elimina al grupo de la lista de grupos públicos |
+| 2 | antisquig | Elimina al usuario que postea con carácteres árabes |
+| 3 | antisquig Strict | Elimina a los usuarios con carácteres árabes en sus nombres |
+| 4 | antibot | Bloquea a los bots de los grupos |
 
 * * *
 
-# Liberbot-related plugins {#Liberbot-related_plugins}
-**Note:** This section may be out of date. The Liberbot-related plugins have not changed in very long time.
-Some plugins are only useful when the bot is used in a Liberbot group, like floodcontrol.lua and moderation.lua.
+#Liberbot {Plugins relacionados con Liberbot}
+**Note:** Seguramente está sección esté desactualziada. Los plugins de liberbot están muy desactualizados.
+Algunos plugins están basados en los grupos de Liberbot, como floodcontrol.lua y moderation.lua.
 
-**floodcontrol.lua** makes the bot compliant with Liberbot's floodcontrol function. When the bot has posted too many messages to a single group in a given period of time, Liberbot will send it a message telling it to cease posting in that group. Here is an example floodcontrol command:
+**floodcontrol.lua** hace al bot compatible con las funciones de control del flood de Liberbot. Cuando un usuario postea demasiado en un grupo, Liberbot le enviará un mensaje diciendole que deje de postear. Ejemplo:
 `/floodcontrol {"groupid":987654321,"duration":600}`
-The bot will accept these commands from both Liberbot and the configured administrator.
+El bot aceptará este comando de LIberbot.
 
-**moderation.lua** allows the owner to use the bot to moderate a Liberbot realm, or set of groups. This works by adding the bot to the realm's admin group and making it an administrator.
-You must configure the plugin in the "moderation" section of config.lua, in the following way:
+**moderation.lua** permite al usuario moderar un grupo. Funciona añadiendo el bot al grupo de Liberbot y haciéndolo admin.
+Tendrás que configurar el config.lua de la siguiente manera:
 ```lua
 moderation = {
     admins = {
-        ['123456789'] = 'Adam',
-        ['246813579'] = 'Eve'
+        ['Un ID'] = 'Un nombre',
+        ['Otro ID'] = 'Otro Nombre'
     },
-    admin_group = -987654321,
-    realm_name = 'My Realm'
+    admin_group = -(ID del grupo),
+    realm_name = 'Nombre del grupo'
 }
 ```
 
-Where Adam and Eve are realm administrators, and their IDs are set as their keys in the form of strings. admin_group is the group ID of the admin group, as a negative number. realm_name is the name of your Libebot realm.
+Cuando se han configurado los admins, ellos tendrán control sobre el bot. 
+admin_group es el ID del grupo de administración, con un número negativo
+realm_name es el nombre del grupo de administración
 
-Once this is set up, put your bot in the admin group and run `/modadd` and `/modhelp` to get started.
+Cuando todo esto está listo, ejecuta `/modadd` y `/modhelp` para comenzar.
 
 * * *
 
-## List of plugins {#List_of_plugins}
+#Lista de plugins
 
 | Plugin | Command | Function | Aliases |
 |:-------|:--------|:---------|:--------|
