@@ -1,7 +1,0 @@
-plugins/mokubot*
-plugins/qtbot*
-plugins/weeabot*
-*.db
-lua-tg
-tg
-README.md
