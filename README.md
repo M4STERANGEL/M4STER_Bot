@@ -1,6 +1,13 @@
 # M4STER_Bot
 Bot desarrollado por [@M4STER_ANGEL](http://telegram.me/m4ster_angel) para Telegram con una API basada en .lua
 
+* * *
+
+#El bot no está en la branch master
+El bot se encuentra en la branch [beta](https://github.com/M4STERANGEL/M4STER_Bot/tree/beta) puesto que aún no está acabado al 100%
+
+* * *
+
 #Instalación
 1 <b>Instalar librerías</b>
 ```bash
