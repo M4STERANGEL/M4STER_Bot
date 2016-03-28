@@ -1,7 +1,7 @@
 local command = 'echo <text>'
 local doc = [[```
 /echo <text>
-Repeats a string of text.
+Repite un trozo de texto
 ```]]
 
 local triggers = {
@@ -9,11 +9,22 @@ local triggers = {
 }
 
 local action = function(msg)
-	if msg.text:input() then
-		sendMessage(msg.chat.id, msg.text:input())
-	else
+
+	local input = msg.text:input()
+
+	if not input then
 		sendMessage(msg.chat.id, doc, true, msg.message_id, true)
+	else
+		local output
+		if msg.chat.type == 'supergroup' then
+			output = 'Repitiendo:\n"' .. input .. '"'
+		else
+			output = latcyr(input)
+		end
+		sendMessage(msg.chat.id, output, true)
 	end
+
+
 end
 
 return {

@@ -1,6 +1,6 @@
 local command = 'whoami'
 local doc = [[```
-Da la información del usuario
+Da información de alguien
 Alias: /who
 ```]]
 
@@ -14,29 +14,38 @@ local action = function(msg)
 		msg = msg.reply_to_message
 	end
 
-	local from_name = msg.from.first_name
 	if msg.from.last_name then
-		from_name = from_name .. ' ' .. msg.from.last_name
-	end
-	if msg.from.username then
-		from_name = '@' .. msg.from.username .. ', ' .. from_name
-	end
-	from_name = from_name .. ' (' .. msg.from.id .. ')'
-
-	local to_name
-	if msg.chat.title then
-		to_name = msg.chat.title .. ' (' .. math.abs(msg.chat.id) .. ').'
+		msg.from.name = msg.from.first_name .. ' ' .. msg.from.last_name
 	else
-		to_name = '@' .. bot.username .. ', ' .. bot.first_name .. ' (' .. bot.id .. ').'
+		msg.from.name = msg.from.first_name
 	end
 
-	local message = 'Tu eres ' .. from_name .. ' y tu estás escribiendo en ' .. to_name
-
-	if database.nicknames[msg.from.id_str] then
-		message = message .. '\nTu alias es ' .. database.nicknames[msg.from.id_str] .. '.'
+	local chat_id = math.abs(msg.chat.id)
+	if chat_id > 1000000000000 then
+		chat_id = chat_id - 1000000000000
 	end
 
-	sendReply(msg, message)
+	local user = 'Tu eres @%s, también conocido como *%s* `[%s]`'
+	if msg.from.username then
+		user = user:format(msg.from.username, msg.from.name, msg.from.id)
+	else
+		user = 'Tu eres *%s* `[%s]`,'
+		user = user:format(msg.from.name, msg.from.id)
+	end
+
+	local group = '@%s, también conocido como *%s* `[%s]`.'
+	if msg.chat.type == 'private' then
+		group = group:format(bot.username, bot.first_name, bot.id)
+	elseif msg.chat.username then
+		group = group:format(msg.chat.username, msg.chat.title, chat_id)
+	else
+		group = '*%s* `[%s]`.'
+		group = group:format(msg.chat.title, chat_id)
+	end
+
+	local output = user .. ', y tu estás escribiendo a ' .. group
+
+	sendMessage(msg.chat.id, output, true, msg.message_id, true)
 
 end
 

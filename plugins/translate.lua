@@ -1,7 +1,7 @@
 local command = 'translate [text]'
 local doc = [[```
 /translate [text]
-Translates input or the replied-to message into the bot's language.
+Traduce algún cacho de texto al español
 ```]]
 
 local triggers = {
@@ -36,7 +36,7 @@ local action = function(msg)
 	end
 
 	local output = jdat.text[1]
-	output = latcyr(output)
+	output = 'Traducción:\n"' .. output .. '"'
 
 	sendReply(msg.reply_to_message or msg, output)
 

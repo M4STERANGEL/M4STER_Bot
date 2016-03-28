@@ -1,11 +1,7 @@
-if not database.nicknames then
-	database.nicknames = {}
-end
-
 local command = 'nick <nickname>'
 local doc = [[```
 /nick <nickname>
-Set your nickname. Use "/nick --" to delete it.
+Ponte un nick. Usa "/nick --" para eliminarlo.
 ```]]
 
 local triggers = {
@@ -28,19 +24,19 @@ local action = function(msg)
 	local output
 	local input = msg.text:input()
 	if not input then
-		if database.nicknames[target.id_str] then
-			output = target.name .. '\'s nickname is "' .. database.nicknames[target.id_str] .. '".'
+		if database.users[target.id_str].nickname then
+			output = target.name .. '\'s nickname is "' .. database.users[target.id_str].nickname .. '".'
 		else
-			output = target.name .. ' currently has no nickname.'
+			output = target.name .. ' no tiene nick actualmente.'
 		end
 	elseif string.len(input) > 32 then
-		output = 'The character limit for nicknames is 32.'
+		output = 'El límite de carácteres es 32'
 	elseif input == '--' or input == '—' then
-		database.nicknames[target.id_str] = nil
-		output = target.name .. '\'s nickname has been deleted.'
+		database.users[target.id_str].nickname = nil
+		output = target.name .. '\'s ha eliminado su nick'
 	else
-		database.nicknames[target.id_str] = input
-		output = target.name .. '\'s nickname has been set to "' .. input .. '".'
+		database.users[target.id_str].nickname = input
+		output = target.name .. '\'s se ha puesto de nick "' .. input .. '".'
 	end
 
 	sendReply(msg, output)
