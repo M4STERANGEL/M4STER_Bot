@@ -8,8 +8,8 @@ return {
 	thecatapi_key = '',
 	nasa_api_key = '',
 	yandex_key = '',
-	simsimi_key = '',
-	simsimi_trial = true,
+	simsimi_key = '088a28d5-021a-4a4c-8bb0-acc9db6c39e6',
+	simsimi_trial = false,
 	time_offset = 3600,
 	lang = 'es',
 	-- Recomendable que no toques esto
