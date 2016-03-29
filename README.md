@@ -13,7 +13,7 @@ sudo apt-get install lua-cjson
 
 2 <b>Clonar el repositorio</b>
 ```bash
-git clone -b beta https://github.com/M4STERANGEL/M4STER_Bot.git
+git clone https://github.com/M4STERANGEL/M4STER_Bot.git
 cd M*
 chmod +x launch.sh
 ```
