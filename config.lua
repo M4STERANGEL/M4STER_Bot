@@ -29,7 +29,7 @@ Envía /help para empezar.
 		argument = 'Argumento Inválido',
 		syntax = 'Sintaxis Inválida',
 		chatter_connection = 'No me apetece hablar ahora',
-		chatter_response = 'No se que decir ahora'
+		chatter_response = 'Aprende a escribir bien, que no te entiendo...'
 	},
 	greetings = {
 		['Hola, #NAME.'] = {
