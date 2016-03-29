@@ -106,7 +106,7 @@ Envía /help para empezar.
 		
 		-- Pon los plugins nuevos encima de esta línea
 		'help.lua',
-        'chatter.lua'
+        	'chatter.lua' 
 		
 	}
 }
