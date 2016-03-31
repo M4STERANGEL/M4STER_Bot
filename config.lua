@@ -8,8 +8,8 @@ return {
 	thecatapi_key = '',
 	nasa_api_key = '',
 	yandex_key = '',
-	simsimi_key = '088a28d5-021a-4a4c-8bb0-acc9db6c39e6',
-	simsimi_trial = false,
+	simsimi_key = '', --Lo siento, he eliminado la clave, hay un límite de solicitudes por día
+	simsimi_trial = true,
 	time_offset = 3600,
 	lang = 'es',
 	-- Recomendable que no toques esto
